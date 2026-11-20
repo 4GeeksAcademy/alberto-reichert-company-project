@@ -1,35 +1,35 @@
 #Yo escojo Brasaland por las siguientes razones:
 
-1. El área de operaciones es la que más me interesa. Poder crear un sistema de manejo de inventario que muestre el inventario actual y que no solo muestre lo que se tiene, sino también otros datos como historiales de precios y demás, y que mande alertas cuando el stock esté bajo. Hacer que todo ese sistema trabaje en conjunto se me hace muy interesante, al igual que llegar a conocer cómo la IA y la automatización pueden ayudar en esta área.
+1. El área de operaciones es la que más me interesa. Me gustaría crear un sistema de manejo de inventario que muestre no solo el inventario actual, sino también otros datos, como historiales de precios, y que mande alertas cuando el stock esté bajo. Hacer que todo ese sistema trabaje en conjunto se me hace muy interesante, al igual que conocer cómo la IA y la automatización pueden ayudar en esta área.
 
-2. El cómo recopilar esos datos en cada departamento es otro aspecto que quiero aprender a crear: desde el diseño de los requerimientos de cada área, hasta verlo ya trabajando en conjunto, diseñando sus pipelines de datos hasta llegar a esos dashboards.
+2. Otro aspecto que quiero aprender es cómo recopilar los datos de cada departamento: desde definir los requerimientos de cada área y diseñar los pipelines de datos, hasta ver todo funcionando en conjunto y llegar a los dashboards.
 
-3. Otro aspecto que me ha interesado mucho es la integración de todos estos sistemas, desde el de inventario, compras y proveedores, hasta marketing, etc., para luego generar un reporte automático al CEO de la empresa, o que el mismo CEO sea capaz de revisar el estado actual de cada departamento y ver sus métricas. Es algo que quiero aprender a diseñar y construir.
+3. También me ha interesado mucho la integración de todos estos sistemas, desde inventario, compras y proveedores hasta marketing, para luego generar un reporte automático para el CEO de la empresa, o para que el mismo CEO pueda revisar el estado actual de cada departamento y ver sus métricas. Es algo que quiero aprender a diseñar y construir.
 
-4. La capacidad de escalar un negocio creo que es de inmensa importancia. Todas estas herramientas de integración y automatización, junto con la estandarización de la información y los procesos, hacen que sea una tarea más fácil que hacerlo todo de manera manual y sin las herramientas adecuadas.
+4. Creo que la capacidad de escalar un negocio es de suma importancia. Todas estas herramientas de integración, automatización e IA, junto con la estandarización de la información y los procesos, hacen que escalar sea mucho más fácil que hacerlo todo de manera manual y sin las herramientas adecuadas.
 
 Las otras opciones me encantaron igualmente, pero la parte operativa y de obtención de datos de Brasaland me llamó más la atención por las aplicaciones que podría tener en sectores que me interesan.
 
 ##AI SUGGESTION
 
-1. “Agente supervisor”
+Estas son algunas ideas de agentes que se podrían implementar:
 
-Un aporte importante podría ser una IA asistente de lenguaje natural para los jefes de departamento, que recolecte las métricas por medio del sistema ya construido y genere resúmenes para ellos.
+1. Agente de recetas y procedimientos (Recipe Knowledge Agent)
+Responde preguntas del personal de cocina sobre recetas, procedimientos y estándares, usando RAG sobre la knowledge base de formación. Cita la fuente, responde en el idioma del usuario y escala a un humano cuando no hay información fiable o el tema es sensible (alérgenos).
 
-De lo generado por estos asistentes, se podría extraer la información para enviarla al asistente de IA del CEO.
+2. Agente de onboarding (Onboarding Tutor Agent)
+Guía al personal nuevo en su itinerario, aplica evaluaciones breves para detectar qué repasar, lleva el registro de su progreso y avisa al supervisor cuando completa una etapa o se atasca.
 
-Con la información recolectada, se podrían generar insights o recomendaciones basándose en esa información, buscando agregarle valor a esos datos.
+3. Agente de analítica departamental (Department Analytics Agent)
+Asistente de lenguaje natural que recolecta métricas desde la API central y los pipelines, genera resúmenes por área y ofrece insights y recomendaciones con datos reales. Cada cifra indica su fuente y fecha, y cada jefe solo ve su área.
 
-Las IA recolectan las métricas de las API y los pipelines, y las procesan y preparan.
+4. Agente ejecutivo (Executive Insights Agent)
+Consolida los resúmenes del agente de analítica departamental en una visión global de la cadena (USD y COP), responde preguntas en lenguaje natural y envía el informe semanal cada lunes a las 7:00, con recomendaciones respaldadas por datos.
 
+5. Agente de personalización y fidelización (Loyalty & Personalization Agent)
+Dentro de la app de clientes, propone promociones personalizadas a partir del comportamiento y los loyalty points del cliente. Usa un catálogo de ofertas aprobado por Marketing, respeta el consentimiento de datos y limita la frecuencia de envíos.
 
-2. “Agente para la app de customers y loyalty points”
+6. Agente de soporte al cliente (nivel 1) (Customer Support Agent, Tier 1)
+Resuelve consultas básicas y deriva a un humano los casos complejos o sensibles, con el historial de la conversación. Etiqueta los motivos de contacto para generar insights sobre el desempeño de la app.
 
-Agente que trabaje dentro de la app ayudando con el marketing, proporcionando sugerencias y promociones basadas en las métricas del consumidor, tomando en cuenta también los loyalty points.
-
-
-3. “Agente como primera barrera para servicio al cliente”
-
-Un agente que apoye con situaciones básicas de servicio al cliente y, para tareas más complicadas, pase el caso a un humano.
-
-También sería una fuente potencial de insights para monitorear el desempeño de la app y poder mejorarla.
+Base común: el agente de recetas y el de onboarding comparten la misma knowledge base. El agente de analítica departamental y el agente ejecutivo comparten la API central, y este último se alimenta de los resúmenes del primero.
